@@ -1,4 +1,40 @@
+<<<<<<< HEAD
+* {
+  margin: 0;
+}
+
+canvas {
+  background: white;
+  display: block;
+}
+
+.action {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+button {
+  border: none;
+  height: 2em;
+  width: 4em;
+  background: #b0b0b0;
+}
+
+#brush {
+  display: none;
+}
+
+.action.x > #brush {
+  display: inline-block;
+}
+
+.action.x > #eraser {
+  display: none;
+=======
 *{margin:0;}
 canvas{
   background: lightgray;
+>>>>>>> 97c53adf4662408ca7c73f43faf971d60e2c795c
 }
