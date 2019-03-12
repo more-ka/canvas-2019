@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var canvas1 = document.getElementById('canvas')
 var context = canvas.getContext('2d')
 //
