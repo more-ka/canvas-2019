@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a135564e39087536544f07c9756f1266a35a6f48
 * {
   margin: 0;
 }
@@ -31,4 +35,12 @@ button {
 
 .action.x > #eraser {
   display: none;
+<<<<<<< HEAD
+=======
+=======
+*{margin:0;}
+canvas{
+  background: lightgray;
+>>>>>>> 97c53adf4662408ca7c73f43faf971d60e2c795c
+>>>>>>> a135564e39087536544f07c9756f1266a35a6f48
 }
