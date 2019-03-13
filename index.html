@@ -6,12 +6,24 @@
   <link rel="stylesheet" href="./style.css">
   <title>canvas画板</title>
 </head>
+
 <body>
-  <canvas id = "canvas" ></canvas>
+  <canvas id="canvas"></canvas>
   <div class="action" id="action">
-    <button id="brush" class="brush">画笔</button>
-    <button id="eraser" class="eraser">橡皮擦</button>
+    <svg class="icon active" id="brush">
+      <use xlink:href="#icon-pencil"></use>
+    </svg><svg class="icon" id="eraser">
+      <use xlink:href="#icon-eraser"></use>
+    </svg>
   </div>
+  <ul>
+    <li id="black" class="active"></li>
+    <li id="red"></li>
+    <li id="green"></li>
+    <li id="blue"></li>
+  </ul>
 </body>
 <script src="./main.js"></script>
+<script src="//at.alicdn.com/t/font_691699_tyw1bnioxb.js"></script>
+
 </html>

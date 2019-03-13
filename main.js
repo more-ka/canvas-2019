@@ -5,12 +5,49 @@ listenToUser(canvas1)
 var activeEraser = false
 eraser.onclick = function () {
   activeEraser = true
-  action.className = 'action x'
+  eraser.classList.add('active')
+  brush.classList.remove('active')
 }
 brush.onclick = function () {
   activeEraser = false
-  action.className = 'action'
+  brush.classList.add('active')
+  eraser.classList.remove('active')
 }
+black.onclick = function(){
+  black.classList.add('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  context.fillStyle = 'balck'
+  context.strokeStyle = 'black'
+}
+red.onclick = function () {
+  black.classList.remove('active')
+  red.classList.add('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  context.fillStyle = 'red'
+  context.strokeStyle = 'red'
+}
+green.onclick = function () {
+  black.classList.remove('active')
+  red.classList.remove('active')
+  green.classList.add('active')
+  blue.classList.remove('active')
+  context.fillStyle = 'lightgreen'
+  context.strokeStyle = 'lightgreen'
+}
+blue.onclick = function () {
+  black.classList.remove('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.add('active')
+  context.fillStyle = 'lightskyblue'
+  context.strokeStyle = 'lightskyblue'
+}
+
+
+
 
 
 function drawCircle(x, y, radius) {
@@ -22,7 +59,7 @@ function drawCircle(x, y, radius) {
 function drawLine(x1, y1, x2, y2) {
   context.beginPath()
   context.moveTo(x1, y1)
-  context.lineWidth = 1
+  context.lineWidth = 2
   context.lineTo(x2, y2)
   context.stroke()
 }
@@ -49,7 +86,7 @@ function listenToUser(canvas) {
   var using = false
   if (document.body.ontouchstart !== undefined) {
     //触屏设备
-    canvas.ontouchstart = function(a){
+    canvas.ontouchstart = function (a) {
       var x = a.touches[0].clientX
       var y = a.touches[0].clientY
       using = true

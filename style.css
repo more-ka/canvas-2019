@@ -1,9 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a135564e39087536544f07c9756f1266a35a6f48
+.icon {
+  width: 1.5em; height: 1.5em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  margin: 32px 8px;
+}
 * {
   margin: 0;
+  padding: 0;
 }
 
 canvas {
@@ -18,29 +22,47 @@ canvas {
 
 }
 
-button {
-  border: none;
-  height: 2em;
-  width: 4em;
-  background: #b0b0b0;
+svg {
+  transition:0.3s;
+}
+.action > #brush{
+  margin-left:32px;
+}
+.action > #brush.active {
+  fill:red;
+  transform: scale(1.2);
 }
 
-#brush {
-  display: none;
+.action > #eraser.active {
+  fill:red;
+  transform: scale(1.2);
+  transition:all 0.3s;
 }
-
-.action.x > #brush {
-  display: inline-block;
+ul{
+  list-style: none;
+  position:fixed;
+  left: 24px;
+  top:64px;
 }
-
-.action.x > #eraser {
-  display: none;
-<<<<<<< HEAD
-=======
-=======
-*{margin:0;}
-canvas{
-  background: lightgray;
->>>>>>> 97c53adf4662408ca7c73f43faf971d60e2c795c
->>>>>>> a135564e39087536544f07c9756f1266a35a6f48
+ul > li{
+  margin: 8px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transition:all 0.3s;
+}
+ul > #black{
+  background: black;
+}
+ul > #red{
+  background: red;
+}
+ul > #green{
+  background: lightseagreen;
+}
+ul > #blue{
+  background: lightskyblue;
+}
+ul > li.active{
+  transform: scale(1.2);
 }
