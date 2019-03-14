@@ -1,18 +1,33 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .icon {
-  width: 1.5em; height: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
   margin: 32px 8px;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 canvas {
   background: white;
   display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .action {
@@ -23,46 +38,111 @@ canvas {
 }
 
 svg {
-  transition:0.3s;
+  transition: 0.3s;
 }
-.action > #brush{
-  margin-left:32px;
+
+.action>#brush {
+  margin-left: 32px;
 }
-.action > #brush.active {
-  fill:red;
+
+.action>#brush.active {
+  fill: red;
   transform: scale(1.2);
 }
 
-.action > #eraser.active {
-  fill:red;
+.action>#eraser.active {
+  fill: red;
   transform: scale(1.2);
-  transition:all 0.3s;
+  transition: all 0.3s;
 }
-ul{
+
+.click {
+  display: block;
+  position: fixed;
+  left: 240px;
+  top: 16px;
+  padding-bottom: 12px;
+}
+.click > div{
+  position: relative;
+}
+.click span.thin {
+  width: 0.1em;
+  height: 0.1em;
+  background: black;
+  border-radius: 50%;
+  display: block;
+  margin: 12px;
+  margin-bottom: 12px;
+}
+
+.click span.medium {
+  width: 0.2em;
+  height:0.2em;
+  background: black;
+  border-radius: 50%;
+  display: block;
+  margin: 11px;
+  margin-bottom: 11px;
+}
+
+.click span.thick {
+  width: 0.4em;
+  height: 0.4em;
+  background: black;
+  border-radius: 50%;
+  display: block;
+  margin: 10px;
+  margin-bottom: 9px;
+}
+
+.click .number {
+  margin: 8px;
+}
+
+.banner {
+  display: none;
+  width: 18px;
+  height: 2px;
+  background: grey;
+  position: absolute;
+  left: 4px;
+  top: 50px;
+}
+.banner.active{
+  display: block;
+}
+ul {
   list-style: none;
-  position:fixed;
+  position: fixed;
   left: 24px;
-  top:64px;
+  top: 64px;
 }
-ul > li{
+
+ul>li {
   margin: 8px;
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  transition:all 0.3s;
+  transition: all 0.3s;
 }
-ul > #black{
+
+ul>#black {
   background: black;
 }
-ul > #red{
+
+ul>#red {
   background: red;
 }
-ul > #green{
+
+ul>#green {
   background: lightseagreen;
 }
-ul > #blue{
+
+ul>#blue {
   background: lightskyblue;
 }
-ul > li.active{
+
+ul>li.active {
   transform: scale(1.2);
 }
