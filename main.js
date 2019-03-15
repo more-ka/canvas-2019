@@ -1,8 +1,13 @@
 var canvas1 = document.getElementById('canvas')
 var context = canvas.getContext('2d')
 var lineWidth = 2
-var eraserWidth = 2
+var eraserWidth = 10
 autoSetSize(canvas1)
+function Clear(){
+  context.clearRect(0,0,canvas1.width,canvas1.height)
+}
+fillWhite()
+
 listenToUser(canvas1)
 var activeEraser = false
 eraser.onclick = function () {
@@ -67,6 +72,17 @@ Thick.onclick = function () {
   thick_banner.classList.add('active')
   lineWidth = 3
   eraserWidth = 20
+}
+clear.onclick = function (){
+  context.clearRect(0,0,canvas1.width,canvas1.height)
+}
+download.onclick = function(){
+  var url = canvas1.toDataURL("image/png")
+  var a = document.createElement('a')
+  document.body.appendChild(a)
+  a.href = url
+  a.download = '我的画'
+  a.click()
 }
 
 function drawCircle(x, y, radius) {
@@ -175,4 +191,8 @@ function listenToUser(canvas) {
       using = false
     }
   }
+}
+function fillWhite() {  //下载图片背景色
+  context.fillStyle= 'white'
+  context.fillRect(0,0,canvas1.width,canvas1.height)
 }

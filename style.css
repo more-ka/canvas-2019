@@ -18,13 +18,8 @@
   padding: 0;
 }
 
-body {
-  overflow: hidden;
-}
 
 canvas {
-  background: white;
-  display: block;
   position: fixed;
   left: 0;
   top: 0;
@@ -34,7 +29,6 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-
 }
 
 svg {
@@ -57,7 +51,6 @@ svg {
 }
 
 .click {
-  display: block;
   position: fixed;
   left: 240px;
   top: 16px;
@@ -145,4 +138,7 @@ ul>#blue {
 
 ul>li.active {
   transform: scale(1.2);
+}
+a{
+  background: red;
 }
